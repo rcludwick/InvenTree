@@ -208,10 +208,12 @@ class StockItemSerializer(InvenTreeModelSerializer):
             'stale',
             'status',
             'status_text',
+            'stocktake_date',
             'supplier_part',
             'supplier_part_detail',
             'tracking_items',
             'uid',
+            'updated',
         ]
 
         """ These fields are read-only in this context.

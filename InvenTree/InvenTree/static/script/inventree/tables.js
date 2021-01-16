@@ -131,8 +131,7 @@ $.fn.inventreeTable = function(options) {
 
     // Callback when a column is changed
     options.onColumnSwitch = function(field, checked) {
-        console.log(`${field} -> ${checked}`);
-
+        
         var columns = table.bootstrapTable('getVisibleColumns');
 
         var text = visibleColumnString(columns);
@@ -155,7 +154,7 @@ $.fn.inventreeTable = function(options) {
         // Which columns are currently visible?
         var visible = table.bootstrapTable('getVisibleColumns');
 
-        if (visible) {
+        if (visible && isArray(visible)) {
             visible.forEach(function(column) {
     
                 // Visible field should *not* be visible! (hide it!)
